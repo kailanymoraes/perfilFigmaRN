@@ -7,8 +7,9 @@ export default function Infos() {
     const [open, setOpen] = useState(false);
     const [value, setValue] = useState(null);
     const [items, setItems] = useState([
-        { label: 'Apple', value: 'apple' },
-        { label: 'Banana', value: 'banana' }
+        { label: 'Júnior', value: 'junior' },
+        { label: 'Pleno', value: 'pleno' },
+        { label: 'Sênior', value: 'senior' }
     ]);
     return (
         <View style={styles.post}>
@@ -16,9 +17,9 @@ export default function Infos() {
             <View>
                 <Text style={styles.information}>Email: rirebodev@gmail.com</Text>
                 <Text style={styles.information}>Telefone: (13) 99576-0909 </Text>
-                <Text style={styles.information}>Senioridade </Text>
+
                 
-                <DropDownPicker
+                <DropDownPicker style={styles.ddp} placeholder='Escolha sua senioridade'
                     open={open}
                     value={value}
                     items={items}
@@ -51,5 +52,14 @@ const styles = StyleSheet.create({
         borderColor: '#6F9CFF',
         borderStyle: 'solid',
         borderWidth: 1.5
+    },
+    ddp: {
+        borderColor: '#6F9CFF',
+        borderStyle: 'solid',
+        borderWidth: 1.5 ,
+        top: 35,
+        width: '90%',
+        alignItems: 'center',
+        left: 20
     }
 })
